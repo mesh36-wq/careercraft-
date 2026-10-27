@@ -1,0 +1,91 @@
+.paper{width:210mm;min-height:297mm;padding:16mm;background:#fff;color:#1b1f2a;font-family:Inter,"Helvetica Neue",Arial,sans-serif;font-size:10pt;line-height:1.45;overflow-wrap:anywhere;text-align:left;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.paper *{box-sizing:border-box}
+.paper h1,.paper h2,.paper p,.paper ul,.paper section,.paper header{margin:0}
+.paper ul{padding-left:4.6mm}
+.paper li{margin:.5mm 0}
+.paper .pre,.paper .entry-desc{white-space:pre-line}
+.paper .ph{color:#9aa1b2}
+.paper .empty{border:.4mm dashed #b6bccb;border-radius:3mm;padding:40mm 10mm;text-align:center;color:#6b7387;font-size:11pt}
+.paper .empty strong{display:block;font-size:14pt;color:#2a3146;margin-bottom:2mm}
+.paper .entry{margin:0 0 3.4mm;break-inside:avoid}
+.paper .entry:last-child{margin-bottom:0}
+.paper .entry-head{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}
+.paper .entry-title{font-weight:600}
+.paper .entry-title+.entry-org::before{content:", "}
+.paper .entry-date{flex:none;white-space:nowrap;font-size:9pt;color:#555d70}
+.paper .entry-meta{font-size:9pt;color:#555d70}
+.paper .entry-desc,.paper .entry ul{margin-top:.8mm}
+.paper .sec{margin-top:6mm}
+.paper .sec h2{break-after:avoid}
+.paper .skill-list,.paper .lang-list,.paper .clist{list-style:none;padding:0}
+.paper .skill-list li{display:inline;margin:0}
+.paper .skill-list li:not(:last-child)::after{content:" \2022 ";white-space:pre}
+
+/* Modern */
+.tpl-modern .hd{border-left:1.6mm solid #c9a24a;padding-left:5mm}
+.tpl-modern h1{font-size:23pt;font-weight:700;color:#0a1730;line-height:1.15;letter-spacing:-.01em}
+.tpl-modern .role{font-size:11.5pt;color:#44506a;margin-top:1mm}
+.tpl-modern .contact{display:flex;flex-wrap:wrap;gap:0 5mm;margin-top:2.5mm;font-size:9pt;color:#44506a}
+.tpl-modern .sec h2{font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0a1730;border-bottom:.25mm solid #d6d9e0;padding-bottom:1.2mm;margin-bottom:2.6mm}
+.tpl-modern .entry-title{color:#0a1730}
+
+/* Executive */
+.tpl-executive{font-family:Georgia,"Times New Roman",serif;font-size:10.5pt}
+.tpl-executive .hd{text-align:center;padding-bottom:5mm;border-bottom:1.1mm double #1b1f2a}
+.tpl-executive h1{font-size:24pt;font-weight:400;letter-spacing:.12em;text-transform:uppercase}
+.tpl-executive .role{font-style:italic;font-size:12pt;margin-top:1.5mm;color:#3a4156}
+.tpl-executive .contact{margin-top:3mm;font-size:9.5pt;color:#3a4156}
+.tpl-executive .bar{margin:0 3mm;color:#9a7a2b}
+.tpl-executive .sec h2{text-align:center;font-size:10pt;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:#7a5f1c;margin-bottom:3mm}
+.tpl-executive .sec-summary p{font-style:italic;text-align:center}
+
+/* Minimalist */
+.tpl-minimalist{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#000}
+.tpl-minimalist .hd{padding-bottom:4mm;border-bottom:.3mm solid #000}
+.tpl-minimalist h1{font-size:20pt;font-weight:700;letter-spacing:-.01em}
+.tpl-minimalist .role{font-size:10.5pt;margin-top:1mm}
+.tpl-minimalist .contact{display:flex;flex-wrap:wrap;gap:0 4mm;margin-top:2mm;font-size:9pt}
+.tpl-minimalist .sec{margin-top:5.5mm}
+.tpl-minimalist .sec h2{font-size:8pt;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:2.2mm}
+.tpl-minimalist .entry-date,.tpl-minimalist .entry-meta{color:#000}
+
+/* Corporate */
+.tpl-corporate{font-size:9.8pt}
+.tpl-corporate .hd{display:table;width:100%;border-bottom:.9mm solid #0a1730}
+.tpl-corporate .hd-l,.tpl-corporate .contact{display:table-cell;vertical-align:bottom;padding-bottom:3.5mm}
+.tpl-corporate h1{font-size:22pt;font-weight:700;color:#0a1730}
+.tpl-corporate .role{font-size:11pt;color:#44506a}
+.tpl-corporate .contact{text-align:right;font-size:9pt;color:#44506a}
+.tpl-corporate .sec{display:table;width:100%;margin-top:0;border-top:.2mm solid #b7bfce}
+.tpl-corporate .sec h2{display:table-cell;width:36mm;padding:3.5mm 4mm 3.5mm 0;vertical-align:top;font-size:8.5pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0a1730}
+.tpl-corporate .sec-body{display:table-cell;vertical-align:top;padding:3.5mm 0}
+.tpl-corporate .hd+.sec{margin-top:5mm}
+
+/* Creative */
+.tpl-creative{font-size:9.8pt}
+.tpl-creative .cols{display:table;width:100%}
+.tpl-creative .side{display:table-cell;width:58mm;vertical-align:top;padding-right:6mm}
+.tpl-creative .main{display:table-cell;vertical-align:top;padding-left:7mm;border-left:.6mm solid #c9a24a}
+.tpl-creative h1{font-family:Georgia,"Times New Roman",serif;font-size:27pt;font-weight:700;line-height:1.1;color:#0a1730}
+.tpl-creative .role{font-family:Georgia,serif;font-style:italic;font-size:11.5pt;color:#7a5f1c;margin-top:1.5mm}
+.tpl-creative .hd{padding-bottom:2mm}
+.tpl-creative .sec h2{font-size:9pt;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7a5f1c;margin-bottom:2.4mm}
+.tpl-creative .side .sec:first-child{margin-top:0}
+.tpl-creative .side .sec h2{color:#0a1730}
+.tpl-creative .side .skill-list li{display:block;margin:.8mm 0}
+.tpl-creative .side .skill-list li::after{content:none!important}
+.tpl-creative .clist li{margin:.8mm 0;font-size:9pt}
+
+/* Graduate */
+.tpl-graduate{font-size:10.2pt}
+.tpl-graduate .hd{padding-bottom:4mm;border-bottom:.5mm solid #0a1730}
+.tpl-graduate h1{font-size:22pt;font-weight:800;color:#0a1730;letter-spacing:-.015em}
+.tpl-graduate .role{font-size:11pt;color:#44506a;margin-top:1mm}
+.tpl-graduate .contact{display:flex;flex-wrap:wrap;gap:0 4.5mm;margin-top:2.2mm;font-size:9pt;color:#44506a}
+.tpl-graduate .sec h2{position:relative;font-size:10pt;font-weight:700;color:#0a1730;margin-bottom:2.6mm;padding-bottom:1.2mm}
+.tpl-graduate .sec h2::after{content:"";position:absolute;left:0;bottom:0;width:14mm;height:.7mm;background:#c9a24a}
+.tpl-graduate .sec-edu .entry-title{font-size:10.8pt}
+.tpl-graduate .skill-list li{display:inline-block;border:.25mm solid #aab2c3;border-radius:2mm;padding:.5mm 2.4mm;margin:0 1.4mm 1.4mm 0}
+.tpl-graduate .skill-list li::after{content:none!important}
+
+@media print{.paper .ph{display:none}}

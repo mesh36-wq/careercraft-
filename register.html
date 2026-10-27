@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create Account – CareerCraft Kenya</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-body" data-page="register">
+<header class="auth-top">
+ <a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">CC</span><span>CareerCraft <em>Kenya</em></span></a>
+ <a class="back" href="index.html">&larr; Back to home</a>
+</header>
+<main class="auth-main"><div class="auth-card">
+ <div id="intro">
+  <h1>Create your account.</h1>
+  <p class="auth-sub">It is free. You do not need an account to build a CV.</p>
+ </div>
+ <div id="alert" class="alert" hidden></div>
+ <form id="form" novalidate>
+  <div class="field"><label for="name">Full name</label>
+   <input id="name" type="text" autocomplete="name" aria-describedby="e-name">
+   <small class="msg" id="e-name" aria-live="polite"></small></div>
+  <div class="field"><label for="email">Email address</label>
+   <input id="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="e-email">
+   <small class="msg" id="e-email" aria-live="polite"></small></div>
+  <div class="field"><label for="password">Password</label>
+   <div class="pw"><input id="password" type="password" autocomplete="new-password" aria-describedby="e-password"><button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false"></button></div>
+   <small class="msg" id="e-password" aria-live="polite"></small>
+   <div class="meter" id="meter" data-s="0" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+   <p class="small" id="meterTxt" aria-live="polite" style="margin:0"></p>
+   <ul class="reqs" id="reqs"></ul></div>
+  <div class="field"><label for="confirm">Confirm password</label>
+   <div class="pw"><input id="confirm" type="password" autocomplete="new-password" aria-describedby="e-confirm"><button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false"></button></div>
+   <small class="msg" id="e-confirm" aria-live="polite"></small></div>
+  <div class="field">
+   <label class="check" for="terms" style="align-items:flex-start;font-weight:400"><input id="terms" type="checkbox" aria-describedby="e-terms"><span>I agree to the <a class="lk" href="legal.html#terms" target="_blank" rel="noopener">Terms of Service</a> and have read the <a class="lk" href="legal.html#privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+   <small class="msg" id="e-terms" aria-live="polite"></small></div>
+  <button type="submit" class="btn btn-primary btn-block" id="submit">Create Account</button>
+ </form>
+ <div id="done" class="done-box" hidden>
+  <h1>Check your email.</h1>
+  <p class="auth-sub">We sent a verification link to</p>
+  <p class="em" id="doneEmail"></p>
+  <div id="alert2" class="alert" hidden></div>
+  <p class="small">Open the link to verify your email, then log in. Check your spam folder if you cannot find it.</p>
+  <a class="btn btn-primary btn-block" href="login.html">Go to Log In</a>
+  <p class="small">Did not get it? <button type="button" class="linkbtn" id="resendReg">Resend the email</button></p>
+ </div>
+ <p class="auth-alt">Already have an account? <a class="lk" href="login.html">Log in</a>.</p>
+</div></main>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+<script src="site.js"></script>
+<script src="auth.js"></script>
+<script src="authpages.js"></script>
+</body>
+</html>

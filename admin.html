@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accounts (Admin) – CareerCraft Kenya</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body data-page="admin">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="page"><div class="wrap acct">
+ <div id="notice" class="alert" hidden></div>
+ <p id="loading" class="small">Checking access&hellip;</p>
+ <div id="denied" hidden>
+  <h1>Access denied.</h1>
+  <p>This page is only for administrators.</p>
+  <a class="btn btn-primary" href="account.html">Back to my account</a>
+ </div>
+ <div id="panel" hidden>
+  <p class="eb">Admin</p>
+  <h1>Accounts</h1>
+  <p class="small">Shows only the details people gave when registering. Passwords, sign-in tokens and CV contents are never shown here.</p>
+  <div class="field search"><label for="q">Search by name or email</label><input id="q" type="text" autocomplete="off"></div>
+  <p class="small" id="count" aria-live="polite"></p>
+  <div class="alist" id="alist"></div>
+  <div class="stack"><button type="button" class="btn" id="more" hidden>Load more</button></div>
+ </div>
+</div></main>
+<div id="site-footer"></div>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+<script src="site.js"></script>
+<script src="auth.js"></script>
+<script src="authpages.js"></script>
+</body>
+</html>

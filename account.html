@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Account – CareerCraft Kenya</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body data-page="account">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="page"><div class="wrap acct">
+ <div id="notice" class="alert" hidden></div>
+ <p id="loading" class="small">Loading your account&hellip;</p>
+ <div id="content" hidden>
+  <p class="eb">Your account</p>
+  <h1 id="welcome">Welcome.</h1>
+  <div class="acct-grid">
+   <section class="card">
+    <h2>Account details</h2>
+    <dl class="kv">
+     <div><dt>Name</dt><dd id="kName"></dd></div>
+     <div><dt>Email</dt><dd id="kEmail"></dd></div>
+     <div><dt>Email status</dt><dd id="kVerified"></dd></div>
+     <div><dt>Member since</dt><dd id="kSince"></dd></div>
+     <div><dt>Account status</dt><dd id="kStatus"></dd></div>
+    </dl>
+    <div id="verifyBox" hidden style="margin-top:14px">
+     <div id="vmsg" class="alert" hidden></div>
+     <p class="small">Your email address is not verified yet. Check your inbox for the verification link.</p>
+     <button type="button" class="btn" id="resendVer">Resend verification email</button>
+    </div>
+   </section>
+   <section class="card">
+    <h2>Update your profile</h2>
+    <div id="pmsg" class="alert" hidden></div>
+    <form id="pform" novalidate>
+     <div class="field"><label for="nameIn">Full name</label>
+      <input id="nameIn" type="text" autocomplete="name" aria-describedby="e-nameIn">
+      <small class="msg" id="e-nameIn" aria-live="polite"></small></div>
+     <button type="submit" class="btn btn-primary" id="psave">Save Changes</button>
+    </form>
+   </section>
+   <section class="card">
+    <h2>Your CVs</h2>
+    <p class="small" style="margin-top:0">CVs you create are saved only in this browser, on this device. Cloud saving is not available yet.</p>
+    <a class="btn btn-primary" href="cv.html">Open CV Builder</a>
+   </section>
+   <section class="card">
+    <h2>Session</h2>
+    <div class="stack" style="margin-top:0">
+     <button type="button" class="btn" id="logout">Log out</button>
+     <a class="btn" id="adminLink" href="admin.html" hidden>Admin: accounts</a>
+    </div>
+   </section>
+  </div>
+ </div>
+</div></main>
+<div id="site-footer"></div>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+<script src="site.js"></script>
+<script src="auth.js"></script>
+<script src="authpages.js"></script>
+</body>
+</html>

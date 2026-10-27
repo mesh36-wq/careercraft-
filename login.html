@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log In – CareerCraft Kenya</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-body" data-page="login">
+<header class="auth-top">
+ <a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">CC</span><span>CareerCraft <em>Kenya</em></span></a>
+ <a class="back" href="index.html">&larr; Back to home</a>
+</header>
+<main class="auth-main"><div class="auth-card">
+ <h1>Welcome back.</h1>
+ <p class="auth-sub">Sign in to continue building your career.</p>
+ <div id="alert" class="alert" hidden></div>
+ <form id="form" novalidate>
+  <div class="field"><label for="email">Email address</label>
+   <input id="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="e-email">
+   <small class="msg" id="e-email" aria-live="polite"></small></div>
+  <div class="field"><label for="password">Password</label>
+   <div class="pw"><input id="password" type="password" autocomplete="current-password" aria-describedby="e-password"><button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false"></button></div>
+   <small class="msg" id="e-password" aria-live="polite"></small></div>
+  <div class="row-between"><span></span><a class="lk" href="forgot.html">Forgot password?</a></div>
+  <button type="submit" class="btn btn-primary btn-block" id="submit">Log In</button>
+  <p id="resendWrap" class="small" hidden>Did not get the email? <button type="button" class="linkbtn" id="resend">Resend verification email</button></p>
+ </form>
+ <p class="auth-alt">Don't have an account? <a class="lk" href="register.html">Create one</a>.</p>
+</div></main>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
+<script src="site.js"></script>
+<script src="auth.js"></script>
+<script src="authpages.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CareerCraft Kenya – Your Next Opportunity Starts With a Better CV</title>
+<meta name="description" content="Create a professional, recruiter-ready CV suited to the Kenyan job market. Six templates, live preview and PDF download.">
+<meta property="og:title" content="CareerCraft Kenya – Your Next Opportunity Starts With a Better CV">
+<meta property="og:description" content="Create a professional CV in minutes and download it as a clean A4 PDF.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="docs.css">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+<section class="hero2" aria-labelledby="heroT">
+ <div class="hero2-in">
+  <div>
+   <p class="pill">Professional CV builder</p>
+   <h1 id="heroT">Your Next Opportunity Starts With a <span>Better CV.</span></h1>
+   <p class="sub">Create a professional, recruiter-ready CV suited to the Kenyan job market. Pick a template, watch it update live, and download it as a clean PDF.</p>
+   <div class="acts">
+    <a class="btn btn-primary" href="cv.html">Create My CV</a>
+    <a class="btn btn-ghost" href="templates.html">Explore Templates</a>
+   </div>
+   <ul class="assure">
+    <li><span data-icon="check" data-size="16"></span>Free to use</li>
+    <li><span data-icon="check" data-size="16"></span>No account needed to build</li>
+    <li><span data-icon="check" data-size="16"></span>A4 PDF download</li>
+   </ul>
+  </div>
+  <div>
+   <div class="show" aria-hidden="true">
+    <div class="thumb d1" data-tpl="corporate"></div>
+    <div class="thumb d3" data-tpl="creative"></div>
+    <div class="thumb d2" data-tpl="modern"></div>
+   </div>
+   <p class="show-cap">Professional designs. Your story.<small>Sample CVs use fictional information.</small></p>
+  </div>
+ </div>
+</section>
+
+<section class="sx" id="templates" aria-labelledby="tplT">
+ <p class="eb">Templates</p>
+ <h2 id="tplT">Find the Style That Fits You.</h2>
+ <p class="lead2">Six layouts, one set of details. Switch any time and nothing you typed is lost.</p>
+ <div class="tgrid" id="tplGrid"></div>
+</section>
+
+<section class="sx" aria-labelledby="howT">
+ <p class="eb">How it works</p>
+ <h2 id="howT">Your Next Opportunity, in Three Steps.</h2>
+ <div class="how">
+  <article class="hw"><span class="hw-n">01</span><h3>Add Your Details</h3><p>Enter your contact information, experience, education, and skills.</p></article>
+  <article class="hw"><span class="hw-n">02</span><h3>Choose Your Design</h3><p>Select a professional template and see your document update live.</p></article>
+  <article class="hw"><span class="hw-n">03</span><h3>Download and Apply</h3><p>Export your finished CV as a clean, properly formatted PDF.</p></article>
+ </div>
+</section>
+
+<section class="sx" id="features" aria-labelledby="featT">
+ <p class="eb">Features</p>
+ <h2 id="featT">Everything You Need to Build a Better CV.</h2>
+ <div class="fgrid">
+  <article class="ft"><span class="ft-i" data-icon="eye"></span><h3>Live CV preview</h3><p>See your A4 document update as you type.</p></article>
+  <article class="ft"><span class="ft-i" data-icon="file"></span><h3>Six templates</h3><p>From classic to creative. Switch with one tap.</p></article>
+  <article class="ft"><span class="ft-i" data-icon="pencil"></span><h3>Easy editing</h3><p>Add, reorder, duplicate and delete experience and education.</p></article>
+  <article class="ft"><span class="ft-i" data-icon="download"></span><h3>A4 PDF export</h3><p>Save a clean PDF using your browser's print dialog.</p></article>
+  <article class="ft"><span class="ft-i" data-icon="check"></span><h3>Automatic saving</h3><p>Your CV is saved on your device as you type.</p></article>
+  <article class="ft"><span class="ft-i" data-icon="upload"></span><h3>Backup and restore</h3><p>Export your CV as a file and import it later.</p></article>
+ </div>
+</section>
+
+<section class="endcta" aria-labelledby="endT">
+ <div class="endcta-in">
+  <h2 id="endT">Your Next Chapter Starts Here.</h2>
+  <p>Create a CV that presents your skills, experience, and ambitions with confidence.</p>
+  <a class="btn btn-primary" href="cv.html">Build My CV</a>
+ </div>
+</section>
+</main>
+<div id="site-footer"></div>
+
+<script src="config.js"></script>
+<script src="site.js"></script>
+<script src="cvrender.js"></script>
+<script>
+(function(){
+ var META={
+  modern:['Best for most roles','Single column'],
+  executive:['Best for senior roles','Single column'],
+  minimalist:['Best for a clean, simple look','Single column'],
+  corporate:['Best for business and admin roles','Label column'],
+  creative:['Best for design and marketing','Two columns'],
+  graduate:['Best for students and first jobs','Single column']
+ };
+ document.getElementById('tplGrid').innerHTML=CC.TEMPLATES.map(function(t){
+  var m=META[t.key],u='cv.html?template='+t.key;
+  return '<article class="tc tc-'+t.key+'">'
+   +'<a class="tc-thumb" href="'+u+'" aria-label="Use the '+t.name+' template"><div class="thumb" data-tpl="'+t.key+'"></div></a>'
+   +'<div class="tc-body"><span class="tc-tag">'+m[1]+'</span><h3>'+t.name+'</h3><p class="tc-for">'+m[0]+'</p>'
+   +'<p class="tc-desc">'+CC.esc(t.desc)+'</p>'
+   +'<a class="btn" href="'+u+'">Use This Template</a></div></article>';
+ }).join('');
+ document.querySelectorAll('[data-icon]').forEach(function(e){e.innerHTML=CCIcon(e.dataset.icon,+e.dataset.size||22);});
+ CC.thumbs();
+ window.addEventListener('load',function(){CC.thumbs();});
+})();
+</script>
+</body>
+</html>

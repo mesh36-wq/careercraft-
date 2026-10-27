@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CV Builder – CareerCraft Kenya</title>
+<meta name="description" content="Build your CV with a live A4 preview, six templates and PDF download.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="builder">
+ <div class="tb" role="toolbar" aria-label="CV tools">
+  <label class="sr" for="tplSel">Template</label>
+  <select id="tplSel"></select>
+  <div class="zoom" role="group" aria-label="Preview zoom">
+   <button type="button" id="zOut" aria-label="Zoom out">&minus;</button>
+   <span id="zLbl" aria-live="polite">100%</span>
+   <button type="button" id="zIn" aria-label="Zoom in">+</button>
+   <button type="button" id="zFit">Fit</button>
+  </div>
+  <span class="spacer"></span>
+  <span id="saveStatus" class="status" role="status" aria-live="polite">Saved</span>
+  <button type="button" class="btn btn-primary" id="dlBtn">Download PDF</button>
+ </div>
+
+ <div class="tabs" role="group" aria-label="Switch view">
+  <button type="button" id="tabEdit" aria-pressed="true">Edit CV</button>
+  <button type="button" id="tabPrev" aria-pressed="false">Preview CV</button>
+ </div>
+
+ <div class="layout" id="layout" data-tab="edit">
+  <section class="pane-edit" aria-label="CV editor">
+   <div class="card docbar">
+    <div class="field"><label for="docSel">My CVs</label><select id="docSel"></select></div>
+    <button type="button" class="btn" id="newDoc">New CV</button>
+   </div>
+   <p class="stepcount" id="stepInfo"></p>
+   <div class="progress" id="progWrap" role="progressbar" aria-label="CV steps" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1"><div id="progBar"></div></div>
+   <nav class="stepper" id="stepper" aria-label="CV sections"></nav>
+   <div class="card" id="panel"></div>
+   <div class="step-nav">
+    <button type="button" class="btn" id="prevStep">Back</button>
+    <button type="button" class="btn btn-primary" id="nextStep">Next</button>
+   </div>
+  </section>
+
+  <section class="pane-preview" aria-label="CV preview">
+   <div class="sheet-scroller" id="scroller">
+    <div id="paperZoom"><div class="paper" id="paper"></div></div>
+   </div>
+  </section>
+ </div>
+</main>
+<div id="site-footer"></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<input type="file" id="importFile" accept=".json,application/json" hidden>
+
+<dialog id="printDlg" aria-labelledby="pdTitle">
+ <h2 id="pdTitle">Download your CV as PDF</h2>
+ <ol>
+  <li>In the print window, set the destination to <strong>Save as PDF</strong>.</li>
+  <li>Paper size: <strong>A4</strong>. Margins: <strong>Default</strong>.</li>
+  <li>Turn <strong>off</strong> headers and footers if offered.</li>
+  <li>Tap <strong>Save</strong> or <strong>Download</strong>.</li>
+ </ol>
+ <label class="check"><input type="checkbox" id="printSkip"> Don't show this again</label>
+ <div class="dlg-actions">
+  <button type="button" class="btn" id="printCancel">Cancel</button>
+  <button type="button" class="btn btn-primary" id="printGo">Open print window</button>
+ </div>
+</dialog>
+
+<script src="config.js"></script>
+<script src="site.js"></script>
+<script src="cvrender.js"></script>
+<script src="cv.js"></script>
+</body>
+</html>
