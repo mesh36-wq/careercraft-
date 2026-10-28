@@ -21,7 +21,7 @@ function message(){
 function url(p){return new URL(p,location.href).href;}
 function nextUrl(){
   var n=new URLSearchParams(location.search).get('next');
-  return ['account.html','cv.html','admin.html'].indexOf(n)>-1?n:'account.html';
+  return ['account.html','cv.html','admin.html','pay.html'].indexOf(n)>-1?n:'account.html';
 }
 window.CCAuth={ok:configured&&sdk,configured:configured,sdk:sdk,getClient:getClient,message:message,url:url,nextUrl:nextUrl};
 })();
